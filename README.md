@@ -56,6 +56,9 @@ The application is fully responsive and optimized for:
 - Tablets
 - Laptops & desktops
 
+## Author
+Lavanya
+
 
 
 
