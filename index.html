@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header class="header">
+        <div class="logo">
+        <img src="assets/logoSW.png" alt="logo">
+        <div>
+        <h1>Stopwatch</h1>
+        <p>Track your time with precision</p>
+
+        <div class="top-actions">
+            <span id="showShortcuts">⌨️ Shortcuts</span>
+            <span id="toggleSound">🔊</span>
+            <span id="fullScreenBtn">⤢</span>
+        </div>
+    </header>
+
+    <!-- TIMER -->
+    <div class="timer-box">
+        <div id="timeDisplay">00:00:00</div>
+        <div id="msDisplay">000</div>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="buttons">
+        <button id="startBtn" class="start">▶ Start</button>
+        <button id="lapBtn" class="lap">🏁 Lap</button>
+        <button id="resetBtn" class="reset">⟲ Reset</button>
+    </div>
+
+    <!-- LAPS -->
+    <div class="laps-container">
+        <div class="lap-header">
+            <span>🏁 Lap Times</span>
+            <div class="lap-actions">
+                <button id="copyLaps">📋</button>
+                <button id="downloadLaps">⬇</button>
+            </div>
+        </div>
+        <div id="lapsList" class="laps-list">
+            No laps recorded yet
+        </div>
+    </div>
+
+    <!-- SHORTCUTS -->
+    <div id="shortcutsBox" class="shortcuts hidden">
+        <h2>Keyboard Shortcuts</h2>
+        <div class="shortcut-row"><span>Start / Pause</span><span class="key">Space</span></div>
+        <div class="shortcut-row"><span>Lap</span><span class="key">L</span></div>
+        <div class="shortcut-row"><span>Reset</span><span class="key">R</span></div>
+        <div class="shortcut-row"><span>Toggle</span><span class="key">K</span></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

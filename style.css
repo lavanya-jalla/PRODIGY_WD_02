@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  background: linear-gradient(155deg, #1706fe, #217cbf);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* ---------- MAIN CARD ---------- */
+.container {
+  width: 100%;
+  max-width: 420px;
+  padding: 26px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(16px);
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.25),
+    inset 0 0 0 rgba(255, 255, 255, 0.1);
+  animation: fadeScale 0.7s ease;
+}
+
+/* ---------- ENTRANCE ---------- */
+@keyframes fadeScale {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ---------- HEADER ---------- */
+.header {
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+
+}
+
+.logo img {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 0px;
+
+
+}
+
+
+.header h1 {
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.header p {
+  opacity: 0.85;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+/* ---------- TOP ACTIONS ---------- */
+.top-actions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.top-actions span {
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 10px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.top-actions span:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* ---------- TIMER ---------- */
+.timer-box {
+  margin-top: 26px;
+  background: rgba(255, 255, 255, 0.14);
+  padding: 34px 0;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+#timeDisplay {
+  font-size: 54px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#msDisplay {
+  font-size: 26px;
+  opacity: 0.75;
+}
+
+/* ---------- BUTTONS ---------- */
+.buttons {
+  margin-top: 26px;
+  display: flex;
+  gap: 14px;
+}
+
+button {
+  flex: 1;
+  border: none;
+  padding: 14px;
+  border-radius: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.08);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.start {
+  background: linear-gradient(45deg, #18d26e, #0ecf49);
+  box-shadow: 0 6px 16px rgba(24, 210, 110, 0.4);
+}
+
+.lap {
+  background: linear-gradient(45deg, #3388ff, #00cfd1);
+  box-shadow: 0 6px 16px rgba(0, 207, 209, 0.4);
+}
+
+.reset {
+  background: linear-gradient(45deg, #ff4444, #ff0080);
+  box-shadow: 0 6px 16px rgba(255, 68, 68, 0.4);
+}
+
+/* ---------- LAPS ---------- */
+.laps-container {
+  margin-top: 24px;
+  background: rgba(255, 255, 255, 0.14);
+  padding: 16px;
+  border-radius: 20px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.lap-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.lap-actions button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.laps-list {
+  font-size: 15px;
+}
+
+.lap-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 12px;
+  border-radius: 14px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+
+  animation: slideIn 0.25s ease;
+}
+
+/* ---------- LAP ANIMATION ---------- */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- SHORTCUTS ---------- */
+.shortcuts {
+  margin-top: 22px;
+  background: rgba(255, 255, 255, 0.14);
+  padding: 16px;
+  border-radius: 18px;
+}
+
+.shortcut-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.key {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* ---------- UTIL ---------- */
+.hidden {
+  display: none;
+}
+
+
+/* ---------- SMALL DEVICES (PHONES) ---------- */
+@media (max-width: 480px) {
+
+  body {
+    padding: 14px;
+  }
+
+  .container {
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  /* Logo & Header */
+  .logo {
+    justify-content: center;
+  }
+
+  .logo img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .header p {
+    font-size: 13px;
+  }
+
+  /* Timer */
+  #timeDisplay {
+    font-size: 42px;
+  }
+
+  #msDisplay {
+    font-size: 20px;
+  }
+
+  .timer-box {
+    padding: 26px 0;
+  }
+
+  /* Buttons */
+  .buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 14px;
+  }
+
+  /* Laps */
+  .laps-container {
+    max-height: 180px;
+    padding: 14px;
+  }
+
+  .lap-item {
+    font-size: 14px;
+  }
+
+  /* Top actions */
+  .top-actions {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+}
+
+/* ---------- MEDIUM DEVICES (TABLETS) ---------- */
+@media (max-width: 768px) {
+
+  .container {
+    max-width: 90%;
+  }
+
+  #timeDisplay {
+    font-size: 48px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+
+  .laps-container {
+    max-height: 200px;
+  }
+}
+
+/* ---------- LARGE SCREENS (DESKTOP OPTIMIZATION) ---------- */
+@media (min-width: 1200px) {
+
+  .container {
+    max-width: 460px;
+  }
+
+  #timeDisplay {
+    font-size: 58px;
+  }
+}
